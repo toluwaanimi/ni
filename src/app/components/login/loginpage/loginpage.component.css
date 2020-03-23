@@ -1,0 +1,49 @@
+@media screen and (max-width: 992px) {
+  .side {
+    display: none;
+  }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  .side {
+    display: none
+  }
+}
+button{
+  margin-top: 10px;
+  width: 300px;
+  margin-bottom: 10px;
+
+}
+.box {
+  display: flex;
+  flex-basis: 50%;
+}
+/*.first{*/
+/*  width: 70px;*/
+
+/*}*/
+/*.sec{*/
+/*  width: 30px;*/
+
+/*}*/
+mat-form-field{
+  width: 300px;
+}
+a{
+  color: #3F51B5;
+  text-decoration: none;
+}
+h2{
+  font-style: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-variant-east-asian: normal;
+  font-weight: bold;
+  font-stretch: normal;
+  font-size: 24px;
+  line-height: 29px;
+}
+
