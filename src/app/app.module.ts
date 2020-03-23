@@ -13,12 +13,21 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {Routes, RouterModule} from '@angular/router';
-import { ForgotpasswordComponent } from './components/login/forgotpassword/forgotpassword.component';
+import {ForgotpasswordComponent} from './components/login/forgotpassword/forgotpassword.component';
+import {DashboardComponent} from './components/homepage/dashboard/dashboard.component';
+import {DashboardnavComponent} from './components/homepage/dashboardnav/dashboardnav.component';
+import {MatTreeModule} from '@angular/material/tree';
+import {HttpClientModule} from '@angular/common/http';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HomeComponent} from './components/account/home/home.component';
+
 
 const appRoutes: Routes = [
-  {path : 'login' , component : LoginpageComponent},
-  {path : 'signup', component : SignuppageComponent},
-  {path : 'forgotpassword', component : ForgotpasswordComponent}
+  {path: 'login', component: LoginpageComponent},
+  {path: 'signup', component: SignuppageComponent},
+  {path: 'forgotpassword', component: ForgotpasswordComponent},
+  {path: '', component: DashboardComponent},
+  {path: 'dashboard', component: HomeComponent}
 ];
 
 @NgModule({
@@ -27,7 +36,11 @@ const appRoutes: Routes = [
     LoginpageComponent,
     SignuppageComponent,
     SideComponent,
-    ForgotpasswordComponent
+    ForgotpasswordComponent,
+    DashboardComponent,
+    DashboardnavComponent,
+    HomeComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -39,7 +52,12 @@ const appRoutes: Routes = [
     MatSelectModule,
     MatButtonModule,
     MatCheckboxModule,
-    RouterModule.forRoot(appRoutes)],
+    RouterModule.forRoot(appRoutes),
+    MatTreeModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
